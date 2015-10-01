@@ -1,0 +1,2 @@
+C:\Codermoji
+['deposits.txt', 'originators.txt', 'peas.txt', 'possibilities.txt', 'showfolder.py', 'stand.txt']
