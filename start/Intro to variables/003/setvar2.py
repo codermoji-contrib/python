@@ -1,0 +1,2 @@
+x = 'hot'
+y = 'water'

@@ -1,0 +1,47 @@
+os: windows # windows | linux | osx
+level: 1 # Difficulty level 1-5
+status: active # could be active | disabled | draft
+setup:
+    script: mkfs.py  # This gets run to set up the env for term cmds.
+sequence: # Must be ordered (sequence!)
+    - question_format: md
+      question: >
+        # Set a var
+
+        In the editor, store the text `hot` in a variable
+        called `x`.
+      filesystem: fs1.yaml
+      editor:
+          - {name: setvar.py, contents: ""}
+      answer: # This is the answer for this q, and setup for next q
+            editor:
+                - {name: setvar.py, contents: setvar1.py}
+    - question_format: md
+      question: >
+        # Set a var
+
+        Add a line that stores the text `water` in a new variable
+        called `y`.
+      answer: # This is the answer for this q, and setup for next q
+            editor:
+                - {name: setvar.py, contents: setvar2.py}
+    - question_format: md
+      question: >
+        # Set a var
+
+        Add one more line that will display the value of both `x`
+        and `y` together. We also want a blank space between the
+        two words.
+      answer: # This is the answer for this q, and setup for next q
+            editor:
+                - {name: setvar.py, contents: setvar3.py}
+    - question_format: md
+      question: >
+        # Set a var
+
+        Now run your program in the terminal. See how variables
+        make it easy to work with data?
+      answer: # This is the answer for this q, and setup for next q
+            term_format: txt
+            term: "python setvar.py"
+            termoutput: t1.txt
