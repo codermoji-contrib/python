@@ -1,0 +1,7 @@
+111110
+1222155
+16.145454545454545
+Traceback (most recent call last):
+  File "num.py", line 4, in <module>
+    print(888 / 0)
+ZeroDivisionError: division by zero
