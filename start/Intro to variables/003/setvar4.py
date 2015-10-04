@@ -1,3 +1,3 @@
 x = 'hot'
 y = 'water'
-print(x + y)
+print(x + ' ' + y)

@@ -29,12 +29,29 @@ sequence: # Must be ordered (sequence!)
       question: >
         # Set a var
 
-        Add one more line that will display the value of both `x`
-        and `y` together. We also want a blank space between the
-        two words.
+        Add a new line to your code that will display the value of
+        `x` and `y` next to each other.
       answer: # This is the answer for this q, and setup for next q
             editor:
                 - {name: setvar.py, contents: setvar3.py}
+    - question_format: md
+      question: >
+        # Set a var
+
+        Now run your program in the terminal.
+      answer: # This is the answer for this q, and setup for next q
+            term_format: txt
+            term: "python setvar.py"
+            termoutput: t1.txt
+    - question_format: md
+      question: >
+        # Set a var
+
+        Great! It doesn't look right though. Change your code so
+        that there is a space between the two words when printed.
+      answer: # This is the answer for this q, and setup for next q
+            editor:
+                - {name: setvar.py, contents: setvar4.py}
     - question_format: md
       question: >
         # Set a var
@@ -44,4 +61,4 @@ sequence: # Must be ordered (sequence!)
       answer: # This is the answer for this q, and setup for next q
             term_format: txt
             term: "python setvar.py"
-            termoutput: t1.txt
+            termoutput: t2.txt
