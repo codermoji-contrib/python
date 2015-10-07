@@ -1,0 +1,4 @@
+  File "fixup.py", line 1
+    data = dict(January=1200; April=900)
+                            ^
+SyntaxError: invalid syntax

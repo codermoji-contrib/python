@@ -1,0 +1,66 @@
+os: windows # windows | linux | osx
+level: 1 # Difficulty level 1-5
+status: active # could be active | disabled | draft
+setup:
+    script: mkfs.py  # This gets run to set up the env for term cmds.
+sequence: # Must be ordered (sequence!)
+    - question_format: md
+      question: |
+        # Dictionary
+
+        Let's create a `dict`. Call it `d`, and set it up to contain these
+        mappings
+
+         - name: Jane
+         - age: 30
+         - mood: happy
+
+        Use the brace symbols `{` and `}`.
+      filesystem: fs1.yaml
+      editor:
+          - {name: main.py, contents: ""}
+      answer: # This is the answer for this q, and setup for next q
+            editor:
+                - {name: main.py, contents: main1.py}
+    - question_format: md
+      question: |
+        # Dictionary
+
+        Now add a line to display this `dict` when your program
+        is run.
+      answer: # This is the answer for this q, and setup for next q
+            editor:
+                - {name: main.py, contents: main2.py}
+    - question_format: md
+      question: >
+        # Dictionary
+
+        Now run your program.
+      answer: # This is the answer for this q, and setup for next q
+            term_format: txt
+            term: "python main.py"
+            termoutput: t1.txt
+    - question_format: md
+      question: >
+        # Dictionary
+
+        There is another way to create a `dict`. Some people prefer
+        it. Change your program use the `dict()` call to make
+        your dict.
+      answer: # This is the answer for this q, and setup for next q
+            editor:
+                - {name: main.py, contents: main3.py}
+    - question_format: md
+      question: >
+        # Dictionary
+
+        Now run your modified program. You should get the same
+        result.
+
+        Think for a few seconds about which method you prefer
+        for making a `dict`, and _why_.
+      answer: # This is the answer for this q, and setup for next q
+            term_format: txt
+            term: "python main.py"
+            termoutput: t2.txt
+

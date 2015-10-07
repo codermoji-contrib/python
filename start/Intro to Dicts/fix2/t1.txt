@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "fixup.py", line 1, in <module>
+    data = {'weight': 20, height: 43}
+NameError: name 'height' is not defined
