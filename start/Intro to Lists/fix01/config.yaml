@@ -1,0 +1,37 @@
+os: windows # windows | linux | osx
+level: 1 # Difficulty level 1-5
+status: active # could be active | disabled | draft
+setup:
+    script: mkfs.py  # This gets run to set up the env for term cmds.
+sequence: # Must be ordered (sequence!)
+    - question_format: md
+      question: >
+        # List problem
+
+        In the text editor, the code in `fixup.py` has a bug.  Run the program to see
+        what the error message says.
+      editor:
+          - {name: fixup.py, contents: fixup1.py}
+      answer: # This is the answer for this q, and setup for next q
+            term_format: txt
+            term: "python fixup.py"
+            termoutput: t1.txt
+    - question_format: md
+      question: |
+        # List problem
+
+        This one should be easy.
+
+        Go ahead and fix the bug.
+      answer: # This is the answer for this q, and setup for next q
+            editor:
+                - {name: fixup.py, contents: fixup2.py}
+    - question_format: md
+      question: >
+        # List problem
+
+        Well done! Now run your program.
+      answer: # This is the answer for this q, and setup for next q
+            term_format: txt
+            term: "python fixup.py"
+            termoutput: t2.txt

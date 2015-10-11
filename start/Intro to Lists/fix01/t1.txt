@@ -1,0 +1,4 @@
+  File "fixup.py", line 1
+    items = ['water', 1; 'food']
+                       ^
+SyntaxError: invalid syntax
