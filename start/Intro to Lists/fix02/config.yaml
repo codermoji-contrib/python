@@ -10,6 +10,8 @@ sequence: # Must be ordered (sequence!)
 
         In the text editor, Make a list called `items1`
         with two values `1` and `2`.
+      editor:
+          - {name: fixup.py, contents: ""}
       answer: # This is the answer for this q, and setup for next q
             editor:
                 - {name: fixup.py, contents: fixup1.py}
